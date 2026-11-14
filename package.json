@@ -28,10 +28,12 @@
     "@angular/router": "22.2.5",
     "@capacitor/app": "8.1.2",
     "@capacitor/core": "8.6.2",
+    "@capacitor/filesystem": "^8.1.5",
     "@capacitor/haptics": "8.0.2",
     "@capacitor/keyboard": "8.0.6",
     "@capacitor/status-bar": "8.0.4",
     "@ionic/angular": "^9.0.0",
+    "capacitor-voice-recorder": "^7.0.6",
     "ionicons": "^8.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
