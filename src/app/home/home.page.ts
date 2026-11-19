@@ -39,7 +39,7 @@ export class HomePage implements OnInit {
   constructor(
     private http: HttpClient,
     private zone: NgZone,
-    private cdr: ChangeDetectorRef, // <--- Idinagdag para sa instant UI refresh
+    private cdr: ChangeDetectorRef, //  instant UI refresh
     private alertCtrl: AlertController
   ) {
     addIcons({
@@ -152,7 +152,7 @@ export class HomePage implements OnInit {
     }
   }
 
-  // Naayos ang 1-click save at instant UI rendering
+  // 1 click save and instant UI rendering
   async saveRecording() {
     try {
       let result: any = null;
@@ -195,17 +195,17 @@ export class HomePage implements OnInit {
           audioUrl: url
         };
 
-        // INSTANT NA ILALABAS SA SCREEN GAMIT ANG CDR AT ZONE
+        
         this.zone.run(() => {
           this.recordings = [newRecordingItem, ...this.recordings];
           this.isRecording = false;
           this.isPaused = false;
-          this.cdr.detectChanges(); // Pinipilit i-refresh ang UI agad-agad
+          this.cdr.detectChanges(); // refreshing ui instant
         });
 
         await this.saveToNativePreferences();
 
-        // Background sync sa server
+        // bg sync sa server
         const payload = {
           title: newRecordingItem.title,
           file_name: fileName,

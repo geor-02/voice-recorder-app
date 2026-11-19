@@ -24,7 +24,7 @@
     <p *ngIf="isPaused">Tap Resume to continue or Save to finish.</p>
     <p *ngIf="!isRecording">Press the button below to start recording.</p>
 
-    <!-- Controls (Tinanggal ang [disabled] para hindi ma-disable) -->
+    <!-- Controls removing [disabled]-->
     <div class="controls-row">
       <ion-button *ngIf="!isRecording" color="danger" shape="round" size="large"
                   (click)="startRecording()">
